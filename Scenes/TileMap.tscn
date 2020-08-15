@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/PlatformTiles.tres" type="TileSet" id=1]
+
+[node name="TileMap" type="TileMap"]
+position = Vector2( -413.288, -2032 )
+tile_set = ExtResource( 1 )
+cell_tile_origin = 1
+collision_layer = 2
+format = 1
+tile_data = PoolIntArray( 2555954, 3, 0, 2883601, 3, 0, 2883640, 3, 0, 3014684, 3, 0, 3014694, 2, 0, 3145793, 3, 0, 3342371, 2, 0, 3342379, 2, 0, 3342388, 3, 0, 3407948, 2, 0, 3604505, 3, 0, 3670080, 3, 0, 3670090, 3, 0, 3735567, 2, 0, 3735591, 3, 0, 3801141, 3, 0, 3932194, 2, 0, 3997742, 3, 0, 4194327, 3, 0, 4325417, 3, 0, 4456485, 2, 0 )
