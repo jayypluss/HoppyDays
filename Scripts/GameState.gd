@@ -22,7 +22,6 @@ func hurt():
 		
 func coin_up():
 	coins += 1
-	print(coins)
 
 func end_game():
 	get_tree().change_scene("res://Scenes/GameOver.tscn")

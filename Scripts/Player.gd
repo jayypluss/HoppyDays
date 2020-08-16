@@ -6,7 +6,7 @@ const UP = Vector2(0,-1)
 const JUMP_SPEED = -1750
 
 var motion = Vector2()
-export var world_limit = 6000
+export var world_limit = 12000
 
 func _ready():
 	Global.Player = self
