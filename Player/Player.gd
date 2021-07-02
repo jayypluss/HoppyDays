@@ -53,5 +53,4 @@ func hurt():
 func boost():
 	position.y -= 1
 	yield(get_tree(), "idle_frame")
-	print("will jump ", JUMP_SPEED * BOOST_MULTIPLIER)
 	motion.y = -JUMP_SPEED * BOOST_MULTIPLIER
