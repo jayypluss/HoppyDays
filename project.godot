@@ -21,13 +21,13 @@ _global_script_class_icons={
 [application]
 
 config/name="HoppyDays"
-run/main_scene="res://Levels/Level1.tscn"
+run/main_scene="res://Levels/Level0.tscn"
 config/icon="res://icon.png"
 
 [display]
 
-window/size/width=2048
-window/size/height=1400
+window/size/width=1280
+window/size/height=680
 
 [gdnative]
 

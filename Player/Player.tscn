@@ -33,51 +33,46 @@ zoom = Vector2( 2, 2 )
 smoothing_enabled = true
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="Camera2D"]
-scroll_base_offset = Vector2( 0, -1366 )
+layer = -1
+scroll_base_offset = Vector2( 0, -400 )
 scroll_ignore_camera_zoom = true
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="Camera2D/ParallaxBackground"]
+[node name="Background" type="ParallaxLayer" parent="Camera2D/ParallaxBackground"]
 motion_mirroring = Vector2( 2048, 2048 )
 
-[node name="TextureRect" type="TextureRect" parent="Camera2D/ParallaxBackground/ParallaxLayer"]
-margin_right = 40.0
-margin_bottom = 40.0
+[node name="TextureRect" type="TextureRect" parent="Camera2D/ParallaxBackground/Background"]
 texture = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="Camera2D/ParallaxBackground"]
+[node name="Clouds" type="ParallaxLayer" parent="Camera2D/ParallaxBackground"]
 motion_scale = Vector2( 0.25, 1 )
+motion_offset = Vector2( 0, -100 )
 motion_mirroring = Vector2( 2048, 0 )
 
-[node name="TextureRect" type="TextureRect" parent="Camera2D/ParallaxBackground/ParallaxLayer2"]
-margin_right = 40.0
-margin_bottom = 40.0
+[node name="TextureRect" type="TextureRect" parent="Camera2D/ParallaxBackground/Clouds"]
 texture = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ParallaxLayer3" type="ParallaxLayer" parent="Camera2D/ParallaxBackground"]
+[node name="Mountains" type="ParallaxLayer" parent="Camera2D/ParallaxBackground"]
 motion_scale = Vector2( 0.5, 1 )
+motion_offset = Vector2( 0, -60 )
 motion_mirroring = Vector2( 2048, 0 )
 
-[node name="TextureRect" type="TextureRect" parent="Camera2D/ParallaxBackground/ParallaxLayer3"]
-margin_right = 40.0
-margin_bottom = 40.0
+[node name="TextureRect" type="TextureRect" parent="Camera2D/ParallaxBackground/Mountains"]
 texture = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ParallaxLayer4" type="ParallaxLayer" parent="Camera2D/ParallaxBackground"]
+[node name="Terrain" type="ParallaxLayer" parent="Camera2D/ParallaxBackground"]
 motion_scale = Vector2( 0.75, 1 )
 motion_mirroring = Vector2( 2048, 0 )
 
-[node name="TextureRect" type="TextureRect" parent="Camera2D/ParallaxBackground/ParallaxLayer4"]
-margin_right = 40.0
-margin_bottom = 40.0
+[node name="TextureRect" type="TextureRect" parent="Camera2D/ParallaxBackground/Terrain"]
 texture = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
