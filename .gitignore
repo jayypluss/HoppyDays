@@ -1,7 +1,1 @@
-.import
 logs/
-*.import
-*/*.import
-*/*/*.import
-*\*.import
-*\*\*.import
