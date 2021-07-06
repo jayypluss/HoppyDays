@@ -29,7 +29,7 @@ func apply_gravity():
 		motion.y += GRAVITY
 
 func jump():
-	if Input.is_action_pressed('jump') and is_on_floor():
+	if Input.is_action_pressed('space') and is_on_floor():
 		motion.y -= JUMP_SPEED
 		$JumpSFX.play()
 		
