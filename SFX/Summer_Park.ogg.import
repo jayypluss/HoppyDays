@@ -11,5 +11,5 @@ dest_files=[ "res://.import/Summer_Park.ogg-cf6731f2fc24bf54214f696e58e51c9a.ogg
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
