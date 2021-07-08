@@ -8,7 +8,7 @@ const GRAVITY = 150
 const WALK_SPEED = 1000
 const JUMP_SPEED = 4000
 const BOOST_MULTIPLIER = 1.5
-const SPRINT_MULTIPLIER = 3
+var SPRINT_MULTIPLIER = 1
 
 signal animate
 
@@ -37,7 +37,6 @@ func jump():
 		
 func move():
 	var walk_direction = 0
-	var sprint_multiplier_helper = 1
 	
 	if pressing_left():
 		walk_direction = -1
@@ -45,17 +44,24 @@ func move():
 		walk_direction = 1
 	else: 
 		walk_direction = 0
-		
+	
 	# TODO
 	# Bunny stops moving to the direction it's moving when it jumps while sprinting
 	if Input.is_action_pressed("shift"):
-		sprint_multiplier_helper = SPRINT_MULTIPLIER
-	elif !Input.is_action_pressed("shift"):
-		sprint_multiplier_helper = 1
-	else: 
-		walk_direction = 0
+		SPRINT_MULTIPLIER = 3
+	elif Input.is_action_just_released("shift"):
+		SPRINT_MULTIPLIER = 1
+		
+#	if motion.y < 0:
+#		SPRINT_MULTIPLIER = 1
+
+#	if Input.is_action_pressed("dash"):
+#		SPRINT_MULTIPLIER = 3
+		
+	print('motion.x: ', motion.x, 'motion.y: ', motion.y)
 	
-	motion.x = walk_direction * WALK_SPEED * sprint_multiplier_helper
+	
+	motion.x = walk_direction * WALK_SPEED * SPRINT_MULTIPLIER
 
 func pressing_left():
 	return Input.is_action_pressed('left') and not Input.is_action_pressed('right')
