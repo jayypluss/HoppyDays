@@ -1,6 +1,6 @@
 extends Node2D
 
-var lives = 0
+var lives = 3
 var coins = 0
 var target_number_of_coins = 20
 

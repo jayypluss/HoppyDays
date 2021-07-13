@@ -45,18 +45,12 @@ func move():
 	else: 
 		walk_direction = 0
 	
-	# TODO
-	# Make inercia work while sprinting 
 	if is_on_floor():
 		if Input.is_action_pressed('Sprint'):
 			SPRINT_MULTIPLIER = 3
 		else:
 			SPRINT_MULTIPLIER = 1
-			
-			
-	print('motion.x: ', motion.x, 'motion.y: ', motion.y)
-	
-	
+		
 	motion.x = walk_direction * WALK_SPEED * SPRINT_MULTIPLIER
 
 func going_left():
