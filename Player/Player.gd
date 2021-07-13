@@ -46,18 +46,14 @@ func move():
 		walk_direction = 0
 	
 	# TODO
-	# Bunny stops moving to the direction it's moving when it jumps while sprinting
-	if Input.is_action_pressed("shift"):
-		SPRINT_MULTIPLIER = 3
-	elif Input.is_action_just_released("shift"):
-		SPRINT_MULTIPLIER = 1
-		
-#	if motion.y < 0:
-#		SPRINT_MULTIPLIER = 1
-
-#	if Input.is_action_pressed("dash"):
-#		SPRINT_MULTIPLIER = 3
-		
+	# Make inercia work while sprinting 
+	if is_on_floor():
+		if Input.is_action_pressed("shift"):
+			SPRINT_MULTIPLIER = 3
+		else:
+			SPRINT_MULTIPLIER = 1
+			
+			
 	print('motion.x: ', motion.x, 'motion.y: ', motion.y)
 	
 	
