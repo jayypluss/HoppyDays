@@ -31,16 +31,16 @@ func apply_gravity():
 
 
 func jump():
-	if Input.is_action_pressed('space') and is_on_floor():
+	if Input.is_action_pressed('Jump') and is_on_floor():
 		motion.y -= JUMP_SPEED
 		$JumpSFX.play()
 		
 func move():
 	var walk_direction = 0
 	
-	if pressing_left():
+	if going_left():
 		walk_direction = -1
-	elif pressing_right():
+	elif going_right():
 		walk_direction = 1
 	else: 
 		walk_direction = 0
@@ -48,7 +48,7 @@ func move():
 	# TODO
 	# Make inercia work while sprinting 
 	if is_on_floor():
-		if Input.is_action_pressed("shift"):
+		if Input.is_action_pressed('Sprint'):
 			SPRINT_MULTIPLIER = 3
 		else:
 			SPRINT_MULTIPLIER = 1
@@ -59,11 +59,11 @@ func move():
 	
 	motion.x = walk_direction * WALK_SPEED * SPRINT_MULTIPLIER
 
-func pressing_left():
-	return Input.is_action_pressed('left') and not Input.is_action_pressed('right')
+func going_left():
+	return Input.is_action_pressed('Left') and not Input.is_action_pressed('Right')
 		
-func pressing_right():
-	return Input.is_action_pressed('right') and not Input.is_action_pressed('left')
+func going_right():
+	return Input.is_action_pressed('Right') and not Input.is_action_pressed('Left')
 		
 func animate():
 	emit_signal('animate', motion)
