@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Levels/Tileset.tres" type="TileSet" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Levels/GameState.gd" type="Script" id=6]
 [ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Items/Coin.tscn" type="PackedScene" id=8]
+[ext_resource path="res://NPCs/Spikeman.tscn" type="PackedScene" id=9]
 
 [node name="Level0" type="Node2D"]
 script = ExtResource( 6 )
@@ -25,13 +26,13 @@ tile_data = PoolIntArray( -4522000, -1073741822, 0, -4456464, -1073741822, 0, -4
 [node name="Hazards" type="Node" parent="."]
 
 [node name="SpikeTop" parent="Hazards" instance=ExtResource( 3 )]
-position = Vector2( 2386.44, -2580.53 )
+position = Vector2( 2292.26, -2671.35 )
 
 [node name="SpikeTop2" parent="Hazards" instance=ExtResource( 3 )]
-position = Vector2( 2157.14, -2551.01 )
+position = Vector2( 1931.78, -2527.46 )
 
 [node name="SpikeTop3" parent="Hazards" instance=ExtResource( 3 )]
-position = Vector2( 4132.7, -2551.01 )
+position = Vector2( 4546.42, -2524.1 )
 
 [node name="SpikeTop4" parent="Hazards" instance=ExtResource( 3 )]
 position = Vector2( -885.959, -2535.31 )
@@ -237,6 +238,17 @@ position = Vector2( -2928.34, 905.443 )
 
 [node name="Coin50" parent="Coins" instance=ExtResource( 8 )]
 position = Vector2( -2852.06, 990.2 )
+
+[node name="NPCs" type="Node" parent="."]
+
+[node name="Spikeman" parent="NPCs" instance=ExtResource( 9 )]
+position = Vector2( 1121.57, -2576.8 )
+
+[node name="Spikeman2" parent="NPCs" instance=ExtResource( 9 )]
+position = Vector2( 6688.71, -2582.7 )
+
+[node name="Spikeman3" parent="NPCs" instance=ExtResource( 9 )]
+position = Vector2( 5544.12, -2580.16 )
 
 [node name="BGM" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
