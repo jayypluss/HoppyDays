@@ -3,6 +3,7 @@ extends KinematicBody2D
 const WORD_LIMIT = 13000
 
 var motion = Vector2(0, 0)
+var stopped = false
 
 const GRAVITY = 150
 const WALK_SPEED = 1000
@@ -13,11 +14,12 @@ var SPRINT_MULTIPLIER = 1
 signal animate
 
 func _physics_process(delta):
-	apply_gravity()
-	jump()
-	move()
-	animate()
-	move_and_slide(motion, Vector2.UP)
+	if !stopped:
+		apply_gravity()
+		jump()
+		move()
+		animate()
+		move_and_slide(motion, Vector2.UP)
 	
 func apply_gravity():
 	if motion.y > WORD_LIMIT:
@@ -61,6 +63,12 @@ func going_right():
 		
 func animate():
 	emit_signal('animate', motion)
+	
+func stop():
+	print('stop')
+	motion.x = 0
+	stopped = true
+	animate()
 	
 func hurt():
 	position.y -= 1

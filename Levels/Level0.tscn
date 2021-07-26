@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Levels/Tileset.tres" type="TileSet" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Items/Coin.tscn" type="PackedScene" id=8]
 [ext_resource path="res://NPCs/Spikeman.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Items/Portal.tscn" type="PackedScene" id=10]
 
 [node name="Level0" type="Node2D"]
 script = ExtResource( 6 )
@@ -249,6 +250,9 @@ position = Vector2( 6688.71, -2582.7 )
 
 [node name="Spikeman3" parent="NPCs" instance=ExtResource( 9 )]
 position = Vector2( 5544.12, -2580.16 )
+
+[node name="Portal" parent="." instance=ExtResource( 10 )]
+position = Vector2( 8903.94, 1983.27 )
 
 [node name="BGM" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
