@@ -9,8 +9,11 @@
 [ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Items/Coin.tscn" type="PackedScene" id=8]
 [ext_resource path="res://NPCs/Spikeman.tscn" type="PackedScene" id=9]
+<<<<<<< HEAD
 [ext_resource path="res://Items/Portal.tscn" type="PackedScene" id=10]
+=======
 [ext_resource path="res://NPCs/Cloud.tscn" type="PackedScene" id=10]
+>>>>>>> 72d2aa9cf72a829881e7490470cc245ffbd76c0f
 
 [node name="Level0" type="Node2D"]
 script = ExtResource( 6 )
