@@ -9,6 +9,7 @@ func _on_Area2D_body_entered(body):
 	#get_tree().call_group('Gamestate', "win_game")
 	$Timer.stop()
 	$Timer.start()
+	$PortalSoundEffect.play()
 
 func _on_Area2D_body_exited(body):
 	$Area2D/Particles2D.process_material.orbit_velocity = 0.25
