@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/portal_sound_fun.ogg-e1e097bcac902f04ff8df6488af58326.oggstr"
+
+[deps]
+
+source_file="res://SFX/portal_sound_fun.ogg"
+dest_files=[ "res://.import/portal_sound_fun.ogg-e1e097bcac902f04ff8df6488af58326.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
