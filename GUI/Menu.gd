@@ -19,3 +19,11 @@ func _input(event):
 
 func _on_ResumeButton_pressed():
 	pause()
+
+
+func _on_CreditsButton_pressed():
+	$Credits.visible = not $Credits.visible
+
+
+func _on_CloseCreditsButton_pressed():
+	_on_CreditsButton_pressed()

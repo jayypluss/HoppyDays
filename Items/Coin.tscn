@@ -54,7 +54,7 @@ script = ExtResource( 6 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "spin"
-frame = 2
+frame = 1
 speed_scale = 2.0
 playing = true
 
@@ -67,7 +67,9 @@ shape = SubResource( 2 )
 
 [node name="GetCoinAudioStream" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
-volume_db = -15.0
+volume_db = -20.0
+pitch_scale = 2.25
+mix_target = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/die = SubResource( 3 )

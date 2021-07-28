@@ -5,8 +5,9 @@
 [ext_resource path="res://Items/Portal.gd" type="Script" id=3]
 [ext_resource path="res://SFX/portal_sound_fun.ogg" type="AudioStream" id=4]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 103.454, 65.7242 )
+[sub_resource type="CapsuleShape2D" id=4]
+radius = 46.8061
+height = 101.223
 
 [sub_resource type="Animation" id=2]
 resource_name = "PortalStretch"
@@ -38,7 +39,7 @@ orbit_velocity_random = 0.0
 script = ExtResource( 3 )
 
 [node name="Area2D" type="Area2D" parent="."]
-scale = Vector2( 1.23239, 1 )
+scale = Vector2( 1.25, 1 )
 
 [node name="Sprite" type="Sprite" parent="Area2D"]
 position = Vector2( 9.20276, -3.25193 )
@@ -47,9 +48,8 @@ scale = Vector2( 0.782947, 1.01727 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 6.60712, 0 )
-rotation = -1.5708
-shape = SubResource( 1 )
+position = Vector2( 7.54151, -4.00452 )
+shape = SubResource( 4 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Area2D"]
 autoplay = "PortalStretch"
