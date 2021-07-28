@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/10-Surf-Shimmy-Free-To-Use-NO-COPYRIGHT-Music-YouTube.ogg-9267f927491c67acd5c813483e8c9e3f.oggstr"
+
+[deps]
+
+source_file="res://SFX/10-Surf-Shimmy-Free-To-Use-NO-COPYRIGHT-Music-YouTube.ogg"
+dest_files=[ "res://.import/10-Surf-Shimmy-Free-To-Use-NO-COPYRIGHT-Music-YouTube.ogg-9267f927491c67acd5c813483e8c9e3f.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

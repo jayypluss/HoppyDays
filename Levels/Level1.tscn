@@ -10,7 +10,7 @@
 [ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=8]
 [ext_resource path="res://NPCs/Spikeman.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Levels/GameState.gd" type="Script" id=10]
-[ext_resource path="res://SFX/Summer_Park.ogg" type="AudioStream" id=11]
+[ext_resource path="res://SFX/10-Surf-Shimmy-Free-To-Use-NO-COPYRIGHT-Music-YouTube.ogg" type="AudioStream" id=11]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource( 10 )
@@ -54,6 +54,7 @@ position = Vector2( 8903.94, 1983.27 )
 [node name="BGM" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )
 volume_db = -20.0
+autoplay = true
 
 [node name="GUI" parent="." instance=ExtResource( 8 )]
 

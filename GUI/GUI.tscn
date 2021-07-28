@@ -144,4 +144,80 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Credits" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DarkOverlay" type="ColorRect" parent="Credits"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1.04913
+margin_top = -19.5288
+margin_right = -1.04919
+margin_bottom = -19.5288
+color = Color( 0, 0, 0, 0.0745098 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Credits"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -143.0
+margin_top = -93.0
+margin_right = 145.0
+margin_bottom = 136.0
+custom_constants/separation = 10
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Credits/VBoxContainer"]
+margin_top = 15.0
+margin_right = 288.0
+margin_bottom = 300.0
+rect_pivot_offset = Vector2( 50.1276, 55.0488 )
+bbcode_enabled = true
+bbcode_text = "[center]
+
+[b]Asset[/b]
+Kenney Assets (https://kenney.nl/assets/jumper-pack)
+
+[b]Sound effects[/b]
+Kenney Assets
+Jay
+
+[b]Songs[/b]
+Surf Shimmy Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 3.0 License
+http://creativecommons.org/licenses/b...
+Youtube : https://youtu.be/b6VbyhLIlKA
+
+[/center]"
+text = "
+
+Asset
+Kenney Assets (https://kenney.nl/assets/jumper-pack)
+
+Sound effects
+Kenney Assets
+Jay
+
+Songs
+Surf Shimmy Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 3.0 License
+http://creativecommons.org/licenses/b...
+Youtube : https://youtu.be/b6VbyhLIlKA
+
+"
+fit_content_height = true
+
 [connection signal="pressed" from="Pause/VBoxContainer/ResumeButton" to="Pause" method="_on_ResumeButton_pressed"]
