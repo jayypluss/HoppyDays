@@ -1,11 +1,12 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://GFX/Items/portal_yellow.png" type="Texture" id=1]
 [ext_resource path="res://GFX/Particles/portal_yellowParticle.png" type="Texture" id=2]
 [ext_resource path="res://Items/Portal.gd" type="Script" id=3]
 [ext_resource path="res://SFX/portal_sound_fun.ogg" type="AudioStream" id=4]
+[ext_resource path="res://SFX/portal_proximity_sound_effect.ogg" type="AudioStream" id=5]
 
-[sub_resource type="CapsuleShape2D" id=4]
+[sub_resource type="CapsuleShape2D" id=1]
 radius = 46.8061
 height = 101.223
 
@@ -49,7 +50,7 @@ texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 7.54151, -4.00452 )
-shape = SubResource( 4 )
+shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Area2D"]
 autoplay = "PortalStretch"
@@ -64,6 +65,13 @@ texture = ExtResource( 2 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 5 )
+volume_db = -10.0
+autoplay = true
+max_distance = 850.0
+attenuation = 2.73209
 
 [node name="PortalSoundEffect" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )

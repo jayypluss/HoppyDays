@@ -11,5 +11,5 @@ dest_files=[ "res://.import/portal_sound_fun.ogg-e1e097bcac902f04ff8df6488af5832
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
