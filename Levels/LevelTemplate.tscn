@@ -1,0 +1,64 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Levels/Tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://Items/Portal.tscn" type="PackedScene" id=2]
+[ext_resource path="res://NPCs/Spikeman.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Hazards/SpikeTop.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Items/JumpPad.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://NPCs/Cloud.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Items/Coin.tscn" type="PackedScene" id=8]
+[ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Levels/GameState.gd" type="Script" id=10]
+[ext_resource path="res://SFX/Summer_Park.ogg" type="AudioStream" id=11]
+
+[node name="LevelTemplate" type="Node2D"]
+script = ExtResource( 10 )
+
+[node name="Player" parent="." instance=ExtResource( 6 )]
+position = Vector2( 875.597, 575.862 )
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( -1.40112, -0.382141 )
+tile_set = ExtResource( 1 )
+collision_layer = 2
+format = 1
+
+[node name="Hazards" type="Node" parent="."]
+
+[node name="SpikeTop" parent="Hazards" instance=ExtResource( 4 )]
+position = Vector2( 1956.64, 630.638 )
+rotation = 3.14159
+
+[node name="SpikeBottom" parent="Hazards" instance=ExtResource( 4 )]
+position = Vector2( 1956.64, 962.324 )
+
+[node name="JumPads" type="Node" parent="."]
+
+[node name="JumpPad" parent="JumPads" instance=ExtResource( 5 )]
+position = Vector2( 2407.46, 799.728 )
+
+[node name="Coins" type="Node" parent="."]
+
+[node name="Coin" parent="Coins" instance=ExtResource( 8 )]
+position = Vector2( 1629.14, 886.197 )
+
+[node name="NPCs" type="Node" parent="."]
+
+[node name="Spikeman" parent="NPCs" instance=ExtResource( 3 )]
+position = Vector2( 3195.23, 743.448 )
+
+[node name="Cloud" parent="NPCs" instance=ExtResource( 7 )]
+position = Vector2( 3123.99, 763.653 )
+
+[node name="Portal" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2766.88, 772.638 )
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+volume_db = -20.0
+
+[node name="GUI" parent="." instance=ExtResource( 9 )]
+
+[connection signal="end_game" from="." to="." method="_on_Level1_end_game"]
+[connection signal="tree_entered" from="." to="Player" method="_on_Level1_tree_entered"]
