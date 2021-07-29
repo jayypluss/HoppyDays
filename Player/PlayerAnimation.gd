@@ -11,3 +11,4 @@ func _on_Player_animate(motion):
 		flip_h = true
 	else:
 		play('idle')
+

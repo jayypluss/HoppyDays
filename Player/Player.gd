@@ -80,3 +80,10 @@ func boost():
 	position.y -= 1
 	yield(get_tree(), "idle_frame")
 	motion.y = -JUMP_SPEED * BOOST_MULTIPLIER
+
+func enterPortalAnimation(portal_body):
+	position.x = portal_body.position.x
+	position.y = portal_body.position.y
+	$AnimationPlayer.play("portal_enter", -1, 3)
+#	$AnimationPlayer.play("portal_enter_size", -1, 1)
+	

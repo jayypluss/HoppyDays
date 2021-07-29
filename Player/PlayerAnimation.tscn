@@ -23,9 +23,13 @@ animations = [ {
 "loop": true,
 "name": "walk",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "enter_portal",
+"speed": 5.0
 } ]
 
 [node name="PlayerAnimation" type="AnimatedSprite"]
 frames = SubResource( 1 )
-animation = "walk"
 script = ExtResource( 6 )

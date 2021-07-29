@@ -2,7 +2,7 @@ extends Node2D
 
 var skipping_level = false
 
-func _on_Area2D_body_entered(body):
+func _on_Area2D_body_entered(body: KinematicBody2D):
 	skipping_level = true
 	body.stop()
 	$Area2D/Particles2D.process_material.orbit_velocity = 1
@@ -10,6 +10,7 @@ func _on_Area2D_body_entered(body):
 	$Timer.stop()
 	$Timer.start()
 	$PortalSoundEffect.play()
+	body.enterPortalAnimation(self)
 
 func _on_Area2D_body_exited(body):
 	$Area2D/Particles2D.process_material.orbit_velocity = 0.25
